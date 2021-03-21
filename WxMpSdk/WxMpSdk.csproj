@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
+    <AssemblyName>WxMpSdk</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>曹瑞鹏</Authors>
+    <Company>山西康维思辰科技有限公司</Company>
+    <Product>WxMpSdk</Product>
+    <Description>微信公众号开发的SDK（.net版本）</Description>
+    <PackageProjectUrl>https://github.com/caoruipeng123/WxApiSdk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/caoruipeng123/WxApiSdk</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageReleaseNotes>首次发布公众号开发sdk版本</PackageReleaseNotes>
+    <PackageId>WxMpSdk</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

@@ -23,8 +23,6 @@ namespace WxMpSdk
            object sender, X509Certificate cert,
             X509Chain chain, SslPolicyErrors error)
         {
-
-            //System.Console.WriteLine("Warning, trust any certificate");
             return true;
         }
         /// <summary>
@@ -36,11 +34,9 @@ namespace WxMpSdk
         {
             WebClient wc = new WebClient();
             wc.Encoding = encoding ?? Encoding.UTF8;
-            //GET请求
             SetCertificatePolicy();
             return wc.DownloadString(url);
         }
-
         /// <summary>
         /// 使用Get方法下载文件
         /// </summary>
@@ -147,7 +143,6 @@ namespace WxMpSdk
                 }
             }
         }
-
         /// <summary>
         /// 使用Post方法上传文件
         /// </summary>
@@ -242,16 +237,5 @@ namespace WxMpSdk
                 }
             }
         }
-        ///// <summary>
-        ///// 请求是否发起自微信客户端的浏览器
-        ///// </summary>
-        ///// <param name="httpContext"></param>
-        ///// <returns></returns>
-        //public static bool IsWeixinClientRequest(this HttpContext httpContext)
-        //{
-        //    return !string.IsNullOrEmpty(httpContext.Request.UserAgent) &&
-        //           httpContext.Request.UserAgent.Contains("MicroMessenger");
-        //}
-
     }
 }

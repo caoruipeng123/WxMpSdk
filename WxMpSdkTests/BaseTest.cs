@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace WxMpSdkTests
 {
     [TestClass]
-    public class UnitTest1
+    public class BaseTest
     {
         [TestMethod]
         public void TestMethod1()

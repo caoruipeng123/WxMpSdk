@@ -1,4 +1,5 @@
 ﻿
+using System.Web;
 using WxMpSdk.Entities;
 
 namespace WxMpSdk
@@ -36,7 +37,7 @@ namespace WxMpSdk
         {
             var url =
                 string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type={2}&scope={3}&state={4}#wechat_redirect",
-                                appId, System.Web.HttpUtility.UrlEncode(redirectUrl), responseType, scope, state);
+                                appId, HttpUtility.UrlEncode(redirectUrl), responseType, scope, state);
             return url;
         }
         /// <summary>

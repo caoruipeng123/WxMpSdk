@@ -1,4 +1,6 @@
-﻿namespace WxMpSdk.Entities
+﻿using Newtonsoft.Json;
+
+namespace WxMpSdk.Entities
 {
     /// <summary>
     /// 微信接口返回的结果
@@ -10,10 +12,12 @@
         /// <summary>
         /// 错误类型
         /// </summary>
-        public ReturnCode errcode { get; set; }
+        [JsonProperty("errcode")]
+        public ReturnCode ErrCode { get; set; }
         /// <summary>
         /// 错误提示信息
         /// </summary>
-        public string errmsg { get; set; }
+        [JsonProperty("errmsg")]
+        public string ErrMsg { get; set; }
     }
 }

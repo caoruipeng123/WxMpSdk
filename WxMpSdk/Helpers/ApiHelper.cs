@@ -112,20 +112,9 @@ namespace WxMpSdk
             {
                 //可能发生错误
                 WxJsonResult errorResult = JsonConvert.DeserializeObject<WxJsonResult>(returnText);
-                //WxJsonResult errorResult = js.Deserialize<WxJsonResult>(returnText);
-                if (errorResult.errcode != ReturnCode.请求成功)
+                if (errorResult.ErrCode != ReturnCode.请求成功)
                 {
-                    //发生错误
-                    throw new ErrorJsonResultException(
-                        string.Format("微信Post请求发生错误！错误代码：{0}，说明：{1}",
-                                      (int)errorResult.errcode,
-                                      errorResult.errmsg),
-                        null, errorResult);
-                    //LogHelper.PayWeiXinLogInfos(string.Format("微信Post请求发生错误！错误代码：{0}，说明：{1}",
-                    //                  (int)errorResult.errcode,
-                    //                  errorResult.errmsg));
-
-
+                    throw new ErrorJsonResultException(string.Format("微信Post请求发生错误！错误代码：{0}，说明：{1}",(int)errorResult.ErrCode,errorResult.ErrCode),null, errorResult);
                 }
             }
 

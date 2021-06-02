@@ -1,4 +1,6 @@
-﻿namespace WxMpSdk.Entities
+﻿using Newtonsoft.Json;
+
+namespace WxMpSdk.Entities
 {
     /// <summary>
     /// 获取OAuth网页授权AccessToken的结果
@@ -9,22 +11,27 @@
         /// <summary>
         /// 网页授权接口调用凭证,注意：此access_token与其他接口的access_token不同
         /// </summary>
-        public string access_token { get; set; }
+        [JsonProperty("access_token")]
+        public string AccessToken { get; set; }
         /// <summary>
         /// 接口调用凭证超时时间，单位（秒）
         /// </summary>
-        public int expires_in { get; set; }
+        [JsonProperty("expires_in")]
+        public int ExpiresIn { get; set; }
         /// <summary>
         /// 用户刷新access_token
         /// </summary>
-        public string refresh_token { get; set; }
+        [JsonProperty("refresh_token")]
+        public string RefreshToken { get; set; }
         /// <summary>
         /// 用户唯一标识，请注意，在未关注公众号时，用户访问公众号的网页，也会产生一个用户和公众号唯一的OpenID
         /// </summary>
-        public string openid { get; set; }
+        [JsonProperty("openid")]
+        public string OpenID { get; set; }
         /// <summary>
         /// 应用授权作用域，snsapi_base （不弹出授权页面，直接跳转，只能获取用户openid），snsapi_userinfo （弹出授权页面，可通过openid拿到昵称、性别、所在地。并且，即使在未关注的情况下，只要用户授权，也能获取其信息）
         /// </summary>
-        public string scope { get; set; }
+        [JsonProperty("scope")]
+        public string Scope { get; set; }
     }
 }

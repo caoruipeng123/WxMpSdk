@@ -46,22 +46,22 @@ namespace WxMpSdk
                         //判断Event类型
                         switch (eventType)
                         {
-                            case Event.LOCATION://地理位置
+                            case Event.Location://地理位置
                                 requestMessage = new RequestMessageEvent_Location();
                                 break;
-                            case Event.subscribe://订阅（关注）
+                            case Event.Subscribe://订阅（关注）
                                 requestMessage = new RequestMessageEvent_Subscribe();
                                 break;
-                            case Event.unsubscribe://取消订阅（关注）
+                            case Event.UnSubscribe://取消订阅（关注）
                                 requestMessage = new RequestMessageEvent_Unsubscribe();
                                 break;
-                            case Event.CLICK://菜单点击
+                            case Event.Click://菜单点击
                                 requestMessage = new RequestMessageEvent_Click();
                                 break;
                             case Event.VIEW://菜单点击[链接跳转]
                                 requestMessage = new RequestMessageEvent_View();
                                 break;
-                            case Event.scan://二维码扫描
+                            case Event.Scan://二维码扫描
                                 requestMessage = new RequestMessageEvent_Scan();
                                 break;
                             case Event.TEMPLATESENDJOBFINISH://模板消息发送完成

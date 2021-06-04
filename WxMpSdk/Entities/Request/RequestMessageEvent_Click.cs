@@ -4,7 +4,7 @@
     {
         public override Event Event
         {
-            get { return Event.CLICK; }
+            get { return Event.Click; }
         }
     }
     public class RequestMessageEvent_View : RequestMessageEventBase

@@ -9,7 +9,7 @@
     {
         public override Event Event
         {
-            get { return Event.LOCATION; }
+            get { return Event.Location; }
         }
         /// <summary>
         /// 地理位置维度，事件类型为LOCATION的时存在

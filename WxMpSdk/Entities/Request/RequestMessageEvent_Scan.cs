@@ -4,7 +4,7 @@
     {
         public override Event Event
         {
-            get { return Event.scan; }
+            get { return Event.Scan; }
         }
         /// <summary>
         /// 二维码的参数

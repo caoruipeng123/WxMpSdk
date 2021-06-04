@@ -17,7 +17,7 @@ namespace WxMpSdk.Entities
         /// </summary>
         public virtual Event Event
         {
-            get { return Event.CLICK; }
+            get { return Event.Click; }
         }
 
         /// <summary>

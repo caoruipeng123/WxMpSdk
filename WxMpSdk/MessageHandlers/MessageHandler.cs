@@ -263,22 +263,22 @@ namespace WxMpSdk
             ResponseMessageBase responseMessage = null;
             switch (strongRequestMessage.Event)
             {
-                case Event.LOCATION://自动发送的用户当前位置
+                case Event.Location://自动发送的用户当前位置
                     responseMessage = OnEvent_LocationRequest(RequestMessage as RequestMessageEvent_Location);
                     break;
-                case Event.subscribe://订阅
+                case Event.Subscribe://订阅
                     responseMessage = OnEvent_SubscribeRequest(RequestMessage as RequestMessageEvent_Subscribe);
                     break;
-                case Event.unsubscribe://退订
+                case Event.UnSubscribe://退订
                     responseMessage = OnEvent_UnsubscribeRequest(RequestMessage as RequestMessageEvent_Unsubscribe);
                     break;
-                case Event.CLICK://菜单点击
+                case Event.Click://菜单点击
                     responseMessage = OnEvent_ClickRequest(RequestMessage as RequestMessageEvent_Click);
                     break;
                 case Event.VIEW://菜单点击[链接跳转]
                     responseMessage = OnEvent_ViewRequest(RequestMessage as RequestMessageEvent_View);
                     break;
-                case Event.scan://二维码
+                case Event.Scan://二维码
                     responseMessage = OnEvent_ScanRequest(RequestMessage as RequestMessageEvent_Scan);
                     break;
                 case Event.TEMPLATESENDJOBFINISH://模板消息发送完毕

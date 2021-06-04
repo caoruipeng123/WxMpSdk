@@ -4,7 +4,7 @@
     {
         public override Event Event
         {
-            get { return Event.subscribe; }
+            get { return Event.Subscribe; }
         }
     }
 }
